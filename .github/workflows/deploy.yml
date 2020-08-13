@@ -13,6 +13,6 @@ jobs:
     - name: Deploy
       uses: SamKirkland/FTP-Deploy-Action@3.1.1
       with:
-        ftp-server: "sftp://preferatti.dev.forgedev.co/home/preferatti/wp-content/themes/dsq/"
+        ftp-server: "sftp://preferatti.dev.forgedev.co:22/home/preferatti/wp-content/themes/dsq/"
         ftp-username: ${{ secrets.SFTP_USER }}
         ftp-password: ${{ secrets.FTP_PASSWORD }}
