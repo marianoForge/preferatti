@@ -19,4 +19,5 @@ jobs:
       with:
         ftp-server: sftp://preferatti.dev.forgedev.co/
         ftp-username: preferatti
+        local-dir: /home/preferatti/wp-content/themes/dsq
         ftp-password: ${{ secrets.FTP_PASSWORD }}
