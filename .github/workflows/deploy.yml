@@ -1,23 +1,21 @@
 name: Publish Theme
 
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
-
+on: push
 jobs:
-  FTP-Deploy-Action:
-    name: FTP-Deploy-Action
+  deploy:
+    name: Deploy
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2.1.0
+    - uses: actions/checkout@v1
+    - run: 'echo "$SSH_DEV_PVT" > the_key'
+      shell: bash
+      env:
+        SSH_KEY: ${{ secrets.SSH_DEV_PVT }}
+    - name: git-ftp push
+      uses: hrsetyono/git-sftp-action@v4
       with:
-        fetch-depth: 2
-    - name: FTP-Deploy-Action
-      uses: SamKirkland/FTP-Deploy-Action@3.1.1
-      with:
-        ftp-server: sftp://preferatti.dev.forgedev.co/
-        ftp-username: preferatti
-        local-dir: /home/preferatti/wp-content/themes/dsq
-        ftp-password: ${{ secrets.FTP_PASSWORD }}
+        url: "sftp://preferatti.dev.forgedev.co/home/preferatti/wp-content/themes/dsq/"
+        user: ${{ secrets.SFTP_USER }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        options: "--key /the_key --auto-init"
+
