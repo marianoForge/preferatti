@@ -1,4 +1,6 @@
+<!-- Setup Init -->
 <?php
+/* SETUP INIT */
 add_action('after_setup_theme', 'dsq_setup');
 function dsq_setup()
 {
@@ -16,7 +18,10 @@ function dsq_setup()
         $content_width = 1920;
     }
     register_nav_menus(array('main-menu' => esc_html__('Main Menu', 'dsq')));
+    register_nav_menus(array('main-menu-footer' => esc_html__('Main Menu Footer', 'dsq')));
 }
+
+/* JAVASCRIPT AND STYLES */
 add_action('wp_enqueue_scripts', 'dsq_load_scripts');
 function dsq_load_scripts()
 {
@@ -48,6 +53,7 @@ function dsq_footer_scripts()
             }
         });
     </script>
+
 <?php
 }
 add_filter('document_title_separator', 'dsq_document_title_separator');

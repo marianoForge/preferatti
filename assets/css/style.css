@@ -18,6 +18,71 @@ dsq is distributed under the terms of private license.
 @import "fonts.css";
 
 /* General Styles */
-body {}
+@media (min-width: 1280px) {
+    #main--wrapper.container {
+        max-width: 1330px;
+    }
+}
+
+/* Menu Artist */
+#menu-wrapper {
+    margin-bottom: 320px;
+    position: relative;
+}
+
+#menu-wrapper:after {
+    content: '';
+}
+
+#menu-wrapper .menu li {
+    position: relative;
+}
+
+#menu-wrapper .menu li.current_page_item:before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: black;
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translatey(-50%);
+}
+
+#menu-wrapper .menu li a {}
+
+/* Menu Footer */
+#menu-footer .menu {
+    margin: 0 -15px;
+    padding: 15px;
+    background-color: white;
+    display: flex;
+}
+
+#menu-footer .menu li {
+    margin: 0 10px;
+    position: relative;
+}
+
+#menu-footer .menu li:first-child {
+    margin-left: 0px;
+}
+
+#menu-footer .menu li:last-child {
+    margin-right: 0px;
+}
+
+#menu-footer .menu li.current_page_item:before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: black;
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translatex(-50%);
+}
 
 /* Custom Styles */

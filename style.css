@@ -1,9 +1,9 @@
 /*
-Theme Name: dsq
+Theme Name: The DSQ Project
 Theme URI: 
 Author: Preferati
 Author URI: 
-Description: The DSQ Project
+Description: The DSQ Project wordpress theme.
 Version: 2020
 License: Private License
 License URI: 
@@ -14,10 +14,4 @@ dsq WordPress Theme © 2020
 dsq is distributed under the terms of private license.
 */
 
-/* Custom fonts */
-@import "fonts.css";
-
-/* General Styles */
-body {}
-
-/* Custom Styles */
+@import "/assets/css/styles.css";

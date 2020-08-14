@@ -1,7 +1,9 @@
 </div>
+</div>
 <!-- End Container -->
+</div>
 <!-- Footer -->
-<footer id="footer" style="border: 10px solid yellow">
+<footer id="footer">
     <?php if (is_active_sidebar('footer-widget-area')) : ?>
         <div id="primary" class="widget-area">
             <ul class="xoxo">
