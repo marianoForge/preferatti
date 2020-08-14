@@ -1,0 +1,23 @@
+/*
+Theme Name: dsq
+Theme URI: 
+Author: Preferati
+Author URI: 
+Description: The DSQ Project
+Version: 2020
+License: Private License
+License URI: 
+Tags: tailwindscss.
+Text Domain: dsq
+
+dsq WordPress Theme © 2020
+dsq is distributed under the terms of private license.
+*/
+
+/* Custom fonts */
+@import "fonts.css";
+
+/* General Styles */
+body {}
+
+/* Custom Styles */
