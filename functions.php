@@ -1,6 +1,7 @@
-<!-- Setup Init -->
 <?php
 /* SETUP INIT */
+
+
 add_action('after_setup_theme', 'dsq_setup');
 function dsq_setup()
 {
@@ -19,6 +20,8 @@ function dsq_setup()
     }
     register_nav_menus(array('main-menu' => esc_html__('Main Menu', 'dsq')));
     register_nav_menus(array('main-menu-footer' => esc_html__('Main Menu Footer', 'dsq')));
+	
+	
 }
 
 /* JAVASCRIPT AND STYLES */
