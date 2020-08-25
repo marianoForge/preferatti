@@ -22,9 +22,9 @@
 					<div class="info--wrapper flex-grow">
 						<?php echo get_field('biography'); ?>
 					</div>
-					<?php if (get_the_title($artist_website->ID)); ?>
+					<?php if (get_field('artist_website')); ?>
 					<p>
-						<a href="<?php ?>" title="Visit <?php echo get_the_title($artist_website->ID); ?> Website" class="btn uppercase px-6 py-4 inline-block">
+						<a href="<?php echo get_field('artist_website'); ?>" title="Visit <?php echo get_the_title(); ?> Website" class="btn uppercase px-6 py-4 inline-block">
 							View Artist Website
 						</a>
 					</p>
