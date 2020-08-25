@@ -1,0 +1,7 @@
+.bio__wrapper .bio--image__wrapper {
+    width: 300px;
+    padding-top: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
