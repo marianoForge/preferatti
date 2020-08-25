@@ -23,9 +23,11 @@
 						<?php echo get_field('biography'); ?>
 					</div>
 					<?php if (get_the_title($artist_website->ID)); ?>
-					<a href="<?php ?>" title="Visit <?php echo get_the_title($artist_website->ID); ?> Website" class="btn uppercase">
-						View Artist Website
-					</a>
+					<p>
+						<a href="<?php ?>" title="Visit <?php echo get_the_title($artist_website->ID); ?> Website" class="btn uppercase px-6 py-4 inline-block">
+							View Artist Website
+						</a>
+					</p>
 					<? endif; ?>
 				</div>
 			</div>
@@ -43,7 +45,7 @@
 								<a href="<?php echo get_permalink($piece->ID); ?>">
 
 									<div class="painting__item mb-4" style="background-image: url(<?php echo get_the_post_thumbnail_url($piece->ID, 'thumbnail'); ?>)"></div>
-									<h4><?php echo get_the_title($piece->ID); ?></h4>
+									<h4 class="uppercase mb-1"><?php echo get_the_title($piece->ID); ?></h4>
 									<h5><?php echo get_the_title($artist->ID); ?></h5>
 								</a>
 							</div>
