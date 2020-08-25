@@ -11,14 +11,16 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <div id="main--wrapper" class="container mx-auto pt-8 pb-8">
-        <div class="flex">
-            <div class="w-4/12">
-                <!-- Header -->
-                <?php include get_template_directory() . '/head.php'; ?>
-
-                <!-- End Header -->
+    <div id="main--wrapper" class="container mx-auto pb-8">
+        <!-- Logo and Description -->
+        <div class="flex mb-4 lg:mb-6">
+            <div id="brand" class="bg-gray flex items-center justify-center">
+                <?php the_custom_logo() ?>
             </div>
-            <div class="w-8/12">
-                <!-- Start Container -->
-                <div id="content-container">
+            <!-- Footer -->
+            <div id="headerDescription" class="lg:ml-5 pl-6 pr-6 pt-4 pb-4 bg-gray">
+                <p><?php bloginfo('description'); ?></p>
+            </div>
+            <!-- End Footer -->
+        </div>
+        <!-- End Logo and Description -->

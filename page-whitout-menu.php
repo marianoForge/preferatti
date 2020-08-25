@@ -1,5 +1,5 @@
 <?php
-/* Template Name: About Us Page */
+/* Template Name: Single Page Whitout Menu */
 ?>
 <?php get_header(); ?>
 <main id="content">

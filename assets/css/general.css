@@ -1,0 +1,15 @@
+/* BG Colors */
+.bg-gray {
+    background-color: #B0AFAF;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+
+@media (min-width: 1280px) {
+    #main--wrapper.container {
+        max-width: 1330px;
+    }
+}

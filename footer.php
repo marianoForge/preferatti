@@ -1,5 +1,4 @@
 </div>
-</div>
 <!-- End Container -->
 </div>
 <!-- Footer -->

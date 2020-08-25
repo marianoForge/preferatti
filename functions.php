@@ -18,10 +18,8 @@ function dsq_setup()
     if (!isset($content_width)) {
         $content_width = 1920;
     }
-    register_nav_menus(array('main-menu' => esc_html__('Main Menu', 'dsq')));
-    register_nav_menus(array('main-menu-footer' => esc_html__('Main Menu Footer', 'dsq')));
-	
-	
+    register_nav_menus(array('main-menu-options' => esc_html__('Main Menu Options', 'dsq')));
+    register_nav_menus(array('main-menu-artists' => esc_html__('Menu Artists', 'dsq')));
 }
 
 /* JAVASCRIPT AND STYLES */
@@ -123,10 +121,6 @@ function dsq_footer_widget_init()
         'after_title' => '',
     ));
 }
-
-
-
-
 
 add_action('wp_head', 'dsq_pingback_header');
 function dsq_pingback_header()

@@ -1,0 +1,16 @@
+/* Header */
+
+/*Brand*/
+#brand img {
+    width: 78px;
+    height: auto;
+    max-width: initial;
+}
+
+#headerDescription p {
+    font-family: Poppins;
+    font-size: 16px;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+    line-height: 22px;
+}
