@@ -1,2 +1,19 @@
-/* Menu Artist */
 /* Main Menu */
+#main-menu-options .menu {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #3F3F3F;
+    letter-spacing: 0.5px;
+    line-height: 15px;
+}
+
+#main-menu-options .menu li {
+    margin-bottom: 20px;
+}
+
+#main-menu-options .menu li:last-child {
+    margin-bottom: 0;
+}
+
+/* Artist Menu */
+#menu-menu-artist .menu {}
