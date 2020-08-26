@@ -19,7 +19,7 @@
 				</div>
 				<div class="bio--info__wrapper w-full md:w-8/12 md:ml-6 flex flex-col">
 					<h2 class="mb-5 ">BIO</h2>
-					<div class="info--wrapper flex-grow mb-4">
+					<div class="info--wrapper flex-grow mb-4 text-justify">
 						<?php echo get_field('biography'); ?>
 					</div>
 					<?php if (get_field('artist_website')); ?>
@@ -33,7 +33,7 @@
 			</div>
 			<div class="bio__wrapper lg:ml-8">
 				<h2 class="mb-6">ART</h2>
-				<div class="info--wrapper mb-16">
+				<div class="info--wrapper mb-16 text-justify">
 					<?php echo get_field('art'); ?>
 				</div>
 				<?php if (get_field('piece')) : ?>
