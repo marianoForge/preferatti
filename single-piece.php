@@ -13,7 +13,7 @@
 			<!-- End Header -->
 		</div>
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-				<div class="md:w-8/12 mx-auto">
+				<div class="md:w-8/12 mx-auto px-2">
 
 					<div class="piece--image-wrapper relative mb-4">
 						<?php the_post_thumbnail('full', array('class' => 'w-full')); ?>
@@ -39,7 +39,7 @@
 								</a>
 							</div>
 							<div class="text-left md:text-right mb-3">
-								<a href="<?php the_permalink(); ?>" class="btn-piece inline-block text-center uppercase px-4 py-2">
+								<a href="<?php echo get_field(''); ?>" class="btn-piece inline-block text-center uppercase px-4 py-2">
 									View More
 								</a>
 							</div>
