@@ -11,7 +11,6 @@
                     </a>
                 </h1>
                 <div class="page--contact__wrapper lg:ml-8">
-                    <?php the_title(); ?>
                     <?php the_content(); ?>
                 </div>
             </div>

@@ -3,6 +3,10 @@
     background-color: #B0AFAF;
 }
 
+.bg-gray-light {
+    background-color: #F0F0F0;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     font-size: 12px;
@@ -80,4 +84,13 @@ body {
     line-height: 28px;
     margin-bottom: 30px;
     font-weight: 400;
+}
+
+@media (max-width: 768px) {
+    #main--wrapper h1 {
+        font-size: 25px;
+        letter-spacing: 0px;
+        line-height: 30px;
+        font-weight: 700;
+    }
 }

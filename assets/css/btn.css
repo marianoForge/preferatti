@@ -7,3 +7,14 @@
     line-height: 15px;
     font-weight: 500;
 }
+
+.btn-piece {
+    background: #EFEFEF;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 10px;
+    color: #3F3F3F;
+    letter-spacing: 1px;
+    text-align: center;
+    line-height: 15px;
+}
