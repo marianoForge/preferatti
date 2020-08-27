@@ -2,7 +2,7 @@
 /* Template Name: Single Page Whitout Menu */
 ?>
 <?php get_header(); ?>
-<main id="content" class="mt-16 pr-4 lg:pr-0 lg:pl-0 pl-4">
+<main id="content" class="mt-8 md:mt-16 pr-4 lg:pr-0 lg:pl-0 pl-4">
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
             <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                 <h1 class="uppercase mb-12">
