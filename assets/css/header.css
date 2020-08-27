@@ -1,0 +1,24 @@
+/* Header */
+
+/*Brand*/
+#brand img {
+    width: 78px;
+    height: auto;
+    max-width: initial;
+}
+
+#headerDescription p {
+    font-size: 16px;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+    line-height: 22px;
+    font-weight: 400;
+}
+
+@media (max-width: 768px) {
+    #headerDescription p {
+        font-size: 12px;
+        line-height: 18px;
+        letter-spacing: 0px;
+    }
+}
