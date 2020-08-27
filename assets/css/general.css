@@ -7,6 +7,10 @@
     background-color: #F0F0F0;
 }
 
+.bg-gray-dark {
+    background-color: #3B3B3B;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     font-size: 12px;
