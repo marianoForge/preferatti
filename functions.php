@@ -24,6 +24,109 @@ function dsq_setup()
 	
 }
 
+
+add_filter('wp_nav_menu_objects', 'dsq_add_filter_menu', 10, 2);
+
+function dsq_add_filter_menu($sorted_menu_objects, $args) {
+    if ($args->menu->name != 'Menu Artist')
+        return $sorted_menu_objects;
+
+    foreach ($sorted_menu_objects as $menu_object) {
+	//	die('meee' .print_r($args, true));
+		
+        // searching for menu items linking to posts or pages
+        // can add as many post types to the array
+        if ( in_array($menu_object->object, array('post', 'page', 'artist')) ) {
+            // set the title to the post_thumbnail if available
+			// thumbnail size is the second parameter of get_the_post_thumbnail()
+			if(has_post_thumbnail($menu_object->object_id)){
+
+				$menu_object->title = 
+					get_the_post_thumbnail($menu_object->object_id, 'thumbnail')."<span class='artist-title'>".$menu_object->title."</span>";
+			}
+        }
+    }
+
+    return $sorted_menu_objects;
+}
+
+function dsq_add_piece_to_dropdown( $pages ){
+    $args = array(
+        'post_type' => 'piece'
+    );
+    $items = get_posts($args);
+    $pages = array_merge($pages, $items);
+
+    return $pages;
+}
+add_filter( 'get_pages', 'dsq_add_piece_to_dropdown' );
+
+
+
+function dsq_next_page_ID($id) {
+
+    // Get all pages under this section
+    $post = get_post($id);
+    $post_parent = $post->post_parent;
+    $get_pages_query = 'child_of=' . $post_parent . '&parent=' . $post_parent . '&sort_column=menu_order&sort_order=asc';
+    $get_pages_query = 'child_of=' . $post_parent . '&post_type=piece&sort_column=menu_order&sort_order=asc';
+	$get_pages = get_pages($get_pages_query);
+	$next_page_id = '';
+
+    // Count results
+	$page_count = count($get_pages);
+	
+	for ($p=0; $p < $page_count; $p++) {
+	  	// Get the array key for our entry
+		if ($id == $get_pages[$p]->ID) break;
+	}
+	
+	// Assign our next key
+	$next_key = $p+1;
+	
+	// If there isn't a value assigned for the previous key, go all the way to the end
+	if (isset($get_pages[$next_key])) {
+		$next_page_id = $get_pages[$next_key]->ID;
+	}
+
+	return $next_page_id;
+}
+
+function dsq_previous_page_ID($id) {
+
+    // Get all pages under this section
+    $post = get_post($id);
+    $post_parent = $post->post_parent;
+    $get_pages_query = 'child_of=' . $post_parent . '&parent=' . $post_parent . '&sort_column=menu_order&sort_order=asc';
+    $get_pages_query = 'child_of=' . $post_parent . '&post_type=piece&sort_column=menu_order&sort_order=asc';
+	$get_pages = get_pages($get_pages_query);
+	$prev_page_id = '';
+
+	// Count results
+	$page_count = count($get_pages);
+	
+	for($p=0; $p < $page_count; $p++) {
+	  // get the array key for our entry
+		if ($id == $get_pages[$p]->ID) break;
+	}
+	
+	// assign our next & previous keys
+	$prev_key = $p-1;
+	$last_key = $page_count-1;
+	
+	// if there isn't a value assigned for the previous key, go all the way to the end
+	if (isset($get_pages[$prev_key])) {
+		$prev_page_id = $get_pages[$prev_key]->ID;
+	}
+
+  	return $prev_page_id;
+}
+
+
+
+
+
+
 /* JAVASCRIPT AND STYLES */
 add_action('wp_enqueue_scripts', 'dsq_load_scripts');
 function dsq_load_scripts()
