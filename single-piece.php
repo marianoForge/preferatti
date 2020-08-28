@@ -41,7 +41,7 @@
 								$<?php echo get_field('price'); ?>
 							</span>
 							<div class="text-left md:text-right mb-3">
-								<a href="#" class="btn-piece inline-block text-center uppercase px-4 py-2">
+								<a href="#" class="btn-piece inline-block text-center uppercase px-4 py-2 inquire-pop-up">
 									Inquire
 								</a>
 							</div>

@@ -67,7 +67,6 @@ body {
 
 #main--wrapper h4 {
     font-size: 12px;
-    color: #3F3F3F;
     letter-spacing: 0.5px;
     line-height: 15px;
     font-weight: 600;
@@ -75,7 +74,6 @@ body {
 
 #main--wrapper h5 {
     font-size: 10px;
-    color: #3F3F3F;
     line-height: 15px;
     font-weight: 400;
 }
@@ -97,4 +95,9 @@ body {
         line-height: 30px;
         font-weight: 700;
     }
+}
+
+/*Text color*/
+.text-gray {
+    color: #3F3F3F;
 }
