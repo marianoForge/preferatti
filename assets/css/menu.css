@@ -87,6 +87,11 @@
         width: 100%;
     }
 
+    #main-menu-options .menu {
+        display: flex;
+        justify-content: space-around;
+    }
+
     #menu-artists .menu {
         flex-direction: row;
         max-height: initial;
