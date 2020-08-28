@@ -1,4 +1,7 @@
-/* Main Menu */
+.menu-wrapper {
+    width: 135px;
+}
+
 #main-menu-options .menu {
     font-size: 12px;
     text-transform: uppercase;
@@ -13,6 +16,20 @@
 
 #main-menu-options .menu li:last-child {
     margin-bottom: 0;
+}
+
+#main-menu-options .menu li.current-menu-item {
+    position: relative;
+}
+
+#main-menu-options .menu li.current-menu-item:after {
+    content: '';
+    background: #CCCCCC;
+    position: absolute;
+    left: -8px;
+    top: 0px;
+    height: 100%;
+    width: 2px;
 }
 
 /* Artist Menu */
@@ -51,17 +68,25 @@
     display: block;
 }
 
-#menu-artists .menu li .menu-artist-image:before {
+#menu-artists .menu li.current-menu-item {
+    position: relative;
+}
+
+#menu-artists .menu li.current-menu-item .menu-artist-image:after {
     content: '';
-    background: #E3E3E3;
+    background: #CCCCCC;
+    position: absolute;
+    left: -8px;
+    top: 0px;
     height: 100%;
     width: 2px;
-    position: absolute;
-    left: -10px;
-    top: 0;
 }
 
 @media (max-width: 768px) {
+    .menu-wrapper {
+        width: 100%;
+    }
+
     #menu-artists .menu {
         flex-direction: row;
         max-height: initial;
@@ -70,4 +95,9 @@
     #menu-artists .menu li {
         margin-right: 20px;
     }
+}
+
+.page-template-page-whitout-menu #menu-artists,
+.page-template-page-contact #menu-artists {
+    display: none;
 }

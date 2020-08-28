@@ -1,4 +1,4 @@
-<header id="header" class="pl-2">
+<header id="header">
     <nav id="main-menu-options" class="mb-4 lg:mb-10">
         <?php wp_nav_menu(array('theme_location' => 'main-menu-options')); ?>
     </nav>

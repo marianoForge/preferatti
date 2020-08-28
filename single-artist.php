@@ -5,7 +5,7 @@
 
 ?>
 <?php get_header(); ?>
-<main id="content" class="mt-8 md:mt-16 pr-4 lg:pr-0 lg:pl-0 pl-4">
+<main id="content" class="mt-8 md:mt-16 pr-4 md:pr-0 md:pl-0 pl-4">
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			<h1 class="uppercase mb-12">
 				<a href="<?php echo get_home_url(); ?>" title="Back to Homepage" class="mr-2">
@@ -13,7 +13,7 @@
 				</a>
 				<?php the_title(); ?>
 			</h1>
-			<div class="bio__wrapper flex flex-wrap mb-12 lg:ml-8">
+			<div class="bio__wrapper flex flex-wrap mb-12 md:ml-8">
 				<div class="w-full md:w-3/12 mb-4 md:mb-0 bio--image__container">
 					<div class="bio--image__wrapper" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>)"></div>
 				</div>
@@ -31,7 +31,7 @@
 					<? endif; ?>
 				</div>
 			</div>
-			<div class="bio__wrapper lg:ml-8">
+			<div class="bio__wrapper md:ml-8">
 				<h2 class="mb-6">ART</h2>
 				<div class="info--wrapper mb-16 text-justify">
 					<?php echo get_field('art'); ?>

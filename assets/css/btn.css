@@ -1,20 +1,34 @@
 .btn {
-    border: 1px solid #000000;
-    border-radius: 10px;
-    font-size: 12px;
-    color: #000000;
-    letter-spacing: 0.5px;
-    line-height: 15px;
-    font-weight: 500;
-}
-
-.btn-piece {
     background: #EFEFEF;
     border-radius: 3px;
-    font-weight: bold;
     font-size: 10px;
     color: #3F3F3F;
     letter-spacing: 1px;
     text-align: center;
     line-height: 15px;
+    font-weight: bold;
+    transition: all 300ms;
+}
+
+.btn:hover {
+    background: #949494;
+    color: white;
+}
+
+.btn-piece {
+    background: #EFEFEF;
+    border-radius: 3px;
+    font-size: 10px;
+    color: #3F3F3F;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+    line-height: 15px;
+    width: 102px;
+}
+
+.btn-piece:hover {
+    background: #949494;
+    color: white;
+    transition: all 300ms;
 }

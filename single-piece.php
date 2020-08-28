@@ -7,7 +7,7 @@
 <?php get_header(); ?>
 <main id="content" class="mt-8 md:mt-16">
 	<div class="flex flex-wrap">
-		<div class="w-full lg:w-2/12">
+		<div class="menu-wrapper">
 			<!-- Header -->
 			<?php include get_template_directory() . '/head.php'; ?>
 			<!-- End Header -->
