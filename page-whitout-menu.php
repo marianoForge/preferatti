@@ -10,7 +10,7 @@
             <!-- End Header -->
         </div>
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-                <div class="w-full md:w-9/12 ml-auto px-2 md:pl-16">
+                <div class="w-full md:w-7/12 mx-auto px-2 md:pl-16">
                     <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                         <h1 class="uppercase mb-12">
                             <!--<a href="<?php echo get_home_url(); ?>" title="Back to Homepage" class="mr-2">
