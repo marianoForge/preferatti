@@ -105,6 +105,7 @@
     flex-direction: row;
     max-height: initial;
     margin: 0px;
+    direction: initial;
   }
 
   #menu-artists .menu li {
@@ -122,32 +123,40 @@
   width: 2px;
   height: 2px;
 }
+
 ::-webkit-scrollbar-button {
   width: 0px;
   height: 0px;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #949494;
   border: 0px none #ffffff;
   border-radius: 0px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #949494;
 }
+
 ::-webkit-scrollbar-thumb:active {
   background: #000000;
 }
+
 ::-webkit-scrollbar-track {
   background: #ffffff;
   border: 0px none #ffffff;
   border-radius: 0px;
 }
+
 ::-webkit-scrollbar-track:hover {
   background: #666666;
 }
+
 ::-webkit-scrollbar-track:active {
   background: #333333;
 }
+
 ::-webkit-scrollbar-corner {
   background: transparent;
 }
