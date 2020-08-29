@@ -35,7 +35,7 @@ function dsq_add_filter_menu($sorted_menu_objects, $args)
 
         // searching for menu items linking to posts or pages
         // can add as many post types to the array
-        if (in_array($menu_object->object, array('post', 'page', 'artist'))) {
+        if (in_array($menu_object->object, array('post', 'page', 'piece'))) {
             // set the title to the post_thumbnail if available
             // thumbnail size is the second parameter of get_the_post_thumbnail()
             if (has_post_thumbnail($menu_object->object_id)) {
@@ -260,4 +260,11 @@ function dsq_comment_count($count)
     } else {
         return $count;
     }
+}
+
+add_filter('acf/format_value/name=price', 'fix_number', 20, 3);
+function fix_number($value, $post_id, $field)
+{
+    $value = number_format($value);
+    return $value;
 }
