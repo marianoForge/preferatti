@@ -104,6 +104,7 @@
   #menu-artists .menu {
     flex-direction: row;
     max-height: initial;
+    margin: 0px;
   }
 
   #menu-artists .menu li {
