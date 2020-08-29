@@ -14,10 +14,6 @@
   margin-bottom: 20px;
 }
 
-#main-menu-options .menu li:last-child {
-  margin-bottom: 0;
-}
-
 #main-menu-options .menu li {
   position: relative;
 }
