@@ -7,7 +7,7 @@
     line-height: 15px;
 }
 
-h2.piece--title {
+#main--wrapper h2.piece--title {
     font-weight: bold;
     font-size: 18px;
     color: #3f3f3f;
@@ -56,10 +56,10 @@ h3.piece--description {
 
 @media (max-width: 768px) {
     .btn-prev {
-        left: 20px;
+        left: 0px;
     }
 
     .btn-next {
-        right: 20px;
+        right: 0px;
     }
 }

@@ -28,7 +28,7 @@
 					</div>
 					<div class="flex flex-wrap">
 						<div class="w-full md:w-6/12">
-							<h2 class="piece--title uppercase mb-1"><?php the_title(); ?></h2>
+							<h2 class="piece--title uppercase mb-2"><?php the_title(); ?></h2>
 							<h3 class="mb-3 piece--description uppercase">
 								<?php echo get_field('piece_specification'); ?>
 							</h3>
