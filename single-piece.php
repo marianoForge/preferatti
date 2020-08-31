@@ -16,14 +16,10 @@
 				<div class="w-full md:w-8/12 mx-auto px-2">
 
 					<div class="piece--image-wrapper relative mb-4">
-						<?php the_post_thumbnail('full', array('class' => 'w-full')); ?>
+						<?php the_post_thumbnail('full', array('class' => 'w-full artist-piece')); ?>
 
 						<a href="<?php echo get_permalink(dsq_previous_page_ID(get_the_ID())); ?>" class="btn-prev"></a>
 						<a href="<?php echo get_permalink(dsq_next_page_ID(get_the_ID())); ?>" class="btn-next"></a>
-						<?php $wp_query = null;
-						$wp_query = $temp;
-						wp_reset_query();
-						?>
 
 					</div>
 					<div class="flex flex-wrap">
@@ -52,6 +48,17 @@
 							</div>
 						</div>
 					</div>
+					
+					<script>
+						
+						window.addEventListener('load', function () {
+							document.getElementById('piece-name').innerHTML = "<?php the_title(); ?>";
+							document.getElementById('artist-name').innerHTML = "<?php echo get_field('artist')->post_title; ?>";
+							document.getElementById('popup-image-container').style.backgroundImage = 'url(<?php echo wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' )[0]; ?>)';
+							
+						});
+					</script>
+
 				</div>
 		<?php endwhile;
 		endif; ?>
