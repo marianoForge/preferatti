@@ -28,13 +28,7 @@ body {
   margin-bottom: 0px;
 }
 
-@media (min-width: 1280px) {
-  #main--wrapper.container {
-    max-width: 1330px;
-  }
-}
-
-@media (min-width: 1024px) {
+@media (min-width: 640px) {
   #main--wrapper.container {
     max-width: 100%;
   }
@@ -46,11 +40,18 @@ body {
   }
 }
 
-@media (min-width: 640px) {
+@media (min-width: 1024px) {
   #main--wrapper.container {
-    max-width: 640px;
+    max-width: 100%;
   }
 }
+
+@media (min-width: 1280px) {
+  #main--wrapper.container {
+    max-width: 1330px;
+  }
+}
+
 /* Back Button */
 .icn-back {
   width: 13px;

@@ -71,6 +71,7 @@
   margin: 0 auto 10px 0;
   position: relative;
   display: block;
+  background-color: white;
 }
 
 #menu-artists .menu li.current-menu-item {
