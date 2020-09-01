@@ -34,6 +34,23 @@ body {
   }
 }
 
+@media (min-width: 1024px) {
+  #main--wrapper.container {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  #main--wrapper.container {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 640px) {
+  #main--wrapper.container {
+    max-width: 640px;
+  }
+}
 /* Back Button */
 .icn-back {
   width: 13px;
