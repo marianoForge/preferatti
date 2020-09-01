@@ -39,9 +39,13 @@ function dsq_add_filter_menu($sorted_menu_objects, $args)
             // set the title to the post_thumbnail if available
             // thumbnail size is the second parameter of get_the_post_thumbnail()
             if (has_post_thumbnail($menu_object->object_id)) {
-
+				$title = get_field('artist', $menu_object->object_id)->post_title;
+				
+				if(strpos($title, " ") !== FALSE){
+					$title = substr($title, 0, strpos($title, " "));
+				}
                 $menu_object->title =
-                    "<span class='menu-artist-image'>" . get_the_post_thumbnail($menu_object->object_id, 'thumbnail') . "</span>" . "<span class='artist-title'>" . $menu_object->title . "</span>";
+                    "<span class='menu-artist-image'>" . get_the_post_thumbnail($menu_object->object_id, 'thumbnail') . "</span>" . "<span class='artist-title'>" . $title . "</span>";
             }
         }
     }
