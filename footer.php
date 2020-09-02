@@ -13,6 +13,7 @@
 </footer>
 <!-- End Footer -->
 </div>
+</div>
 <!-- Javascript -->
 <?php wp_footer(); ?>
 <!-- End Javascript -->

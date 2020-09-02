@@ -6,7 +6,11 @@
     <div class="flex flex-wrap">
         <div class="menu-wrapper">
             <!-- Header -->
-            <?php include get_template_directory() . '/head.php'; ?>
+            <header id="header" class="px-4 md:px-0">
+                <nav id="main-menu-options" class="mb-4 lg:mb-10">
+                    <?php wp_nav_menu(array('theme_location' => 'main-menu-options')); ?>
+                </nav>
+            </header>
             <!-- End Header -->
         </div>
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>

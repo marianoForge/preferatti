@@ -11,24 +11,8 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <!-- Modal Inquire
-    <div class="modal-wrapper fixed h-full w-full z-10 bg-opacity-50 bg-black flex align-center justify-center">
-        <div class="modal-container w-8/12 mx-auto flex flex-wrap bg-gray-light">
-            <div class="w-full md:w-6/12 relative bg-no-repeat bg-cover" style="background-image: url(<?php echo the_post_thumbnail_url('full'); ?>)">
-                <div class="bg-black absolute p-6 bottom-0 left-0 w-full bg-opacity-50 pd-6 text-white">
-                    <h2 class="uppercase mb-1 text-white"><?php the_title(); ?></h2>
-                    <h3 class="mb-3 uppercase text-white">
-                        <?php echo get_permalink(get_field('artist')->name) ?>
-                    </h3>
-                </div>
-            </div>
-            <div class="w-full md:w-6/12">
-                <h1 class="text-center uppercase mb-4">Inquire</h1>
-                <?php echo do_shortcode("[contact-form-7 id='146']"); ?>
-            </div>
-        </div>
-    </div>-->
-    <!-- End Modal Inquire -->
+    <!-- Transition -->
+
     <div id="main--wrapper" class="container mx-auto pb-8">
         <!-- Logo and Description -->
         <div class="flex mb-4 md:mb-6">
@@ -42,3 +26,5 @@
             <!-- End Footer -->
         </div>
         <!-- End Logo and Description -->
+        <!-- Swup Transition -->
+        <div id="swup" class="transition-fade">

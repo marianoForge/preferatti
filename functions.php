@@ -39,11 +39,11 @@ function dsq_add_filter_menu($sorted_menu_objects, $args)
             // set the title to the post_thumbnail if available
             // thumbnail size is the second parameter of get_the_post_thumbnail()
             if (has_post_thumbnail($menu_object->object_id)) {
-				$title = get_field('artist', $menu_object->object_id)->post_title;
-				
-				if(strpos($title, " ") !== FALSE){
-					$title = substr($title, 0, strpos($title, " "));
-				}
+                $title = get_field('artist', $menu_object->object_id)->post_title;
+
+                if (strpos($title, " ") !== FALSE) {
+                    $title = substr($title, 0, strpos($title, " "));
+                }
                 $menu_object->title =
                     "<span class='menu-artist-image'>" . get_the_post_thumbnail($menu_object->object_id, 'thumbnail') . "</span>" . "<span class='artist-title'>" . $title . "</span>";
             }
@@ -144,6 +144,10 @@ function dsq_load_scripts()
 add_action('wp_footer', 'dsq_footer_scripts');
 function dsq_footer_scripts()
 {
+    /* Plugins Js */
+    wp_enqueue_script('js-swup', get_template_directory_uri() . '/assets/js/swup.min.js', array('jquery'));
+    /* Init Js */
+    wp_enqueue_script('js-initial', get_template_directory_uri() . '/assets/js/init.js', array('jquery'));
 ?>
     <script>
         jQuery(document).ready(function($) {

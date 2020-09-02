@@ -1,0 +1,21 @@
+/*
+Theme Name: The DSQ Project
+Theme URI:
+Author: Preferati
+Author URI:
+Description: The DSQ Project wordpress theme.
+Version: 2020
+License: Private License
+License URI:
+Tags: tailwindscss.
+Text Domain: dsq
+
+dsq WordPress Theme © 2020
+dsq is distributed under the terms of private license.
+*/
+
+const options = {
+  containers: ["#main--wrapper"],
+  cache: false,
+};
+const swup = new Swup(options);
