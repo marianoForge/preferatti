@@ -26,5 +26,3 @@
             <!-- End Footer -->
         </div>
         <!-- End Logo and Description -->
-        <!-- Swup Transition -->
-        <div id="swup" class="transition-fade">

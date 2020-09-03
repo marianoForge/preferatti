@@ -67,7 +67,8 @@
 #menu-artists .menu li .menu-artist-image {
   width: 80px;
   height: 80px;
-  overflow: hidden;
+
+  /*overflow: hidden;*/
   margin: 0 auto 10px 0;
   position: relative;
   display: block;
@@ -78,15 +79,33 @@
   position: relative;
 }
 
-#menu-artists .menu li.current-menu-item .menu-artist-image:after {
+#menu-artists .menu li .menu-artist-image:before {
   content: "";
-  background: #cccccc;
-  position: absolute;
-  left: -8px;
-  top: 0px;
+  width: 100%;
   height: 100%;
-  width: 2px;
+  z-index: 1;
+  border: 4px solid #ccc;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  opacity: 0;
+  transition: all 300ms;
 }
+
+#menu-artists .menu li.current-menu-item .menu-artist-image:before {
+  opacity: 1;
+}
+
+/*#menu-artists .menu li.current-menu-item .menu-artist-image:after {
+    content: "";
+    background: #949494;
+    position: absolute;
+    right: -8px;
+    top: 0px;
+    height: 100%;
+    width: 2px;
+}*/
 
 @media (max-width: 768px) {
   .menu-wrapper {
@@ -116,44 +135,44 @@
 }
 
 /* Scroll bar*/
-::-webkit-scrollbar {
-  width: 2px;
-  height: 2px;
+#menu-artists .menu::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
 }
 
-::-webkit-scrollbar-button {
+#menu-artists .menu::-webkit-scrollbar-button {
   width: 0px;
   height: 0px;
 }
 
-::-webkit-scrollbar-thumb {
+#menu-artists .menu::-webkit-scrollbar-thumb {
   background: #949494;
   border: 0px none #ffffff;
   border-radius: 0px;
 }
 
-::-webkit-scrollbar-thumb:hover {
+#menu-artists .menu::-webkit-scrollbar-thumb:hover {
   background: #949494;
 }
 
-::-webkit-scrollbar-thumb:active {
-  background: #000000;
+#menu-artists .menu::-webkit-scrollbar-thumb:active {
+  background: #949494;
 }
 
-::-webkit-scrollbar-track {
+#menu-artists .menu::-webkit-scrollbar-track {
   background: #ffffff;
   border: 0px none #ffffff;
   border-radius: 0px;
 }
 
-::-webkit-scrollbar-track:hover {
-  background: #666666;
+#menu-artists .menu::-webkit-scrollbar-track:hover {
+  background: #ffffff;
 }
 
-::-webkit-scrollbar-track:active {
-  background: #333333;
+#menu-artists .menu::-webkit-scrollbar-track:active {
+  background: #ffffff;
 }
 
-::-webkit-scrollbar-corner {
+#menu-artists .menu::-webkit-scrollbar-corner {
   background: transparent;
 }

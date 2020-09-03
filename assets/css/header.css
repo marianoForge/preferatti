@@ -15,10 +15,30 @@
     font-weight: 400;
 }
 
+#brand {
+    flex: 0 0 98px;
+}
+
 @media (max-width: 768px) {
     #headerDescription p {
         font-size: 12px;
         line-height: 18px;
         letter-spacing: 0px;
+    }
+
+    #brand {
+        flex: 0 0 142px;
+    }
+}
+
+@media (min-width: 841px) and (max-width: 1030px) {
+    #brand {
+        flex: 0 0 120px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 840px) {
+    #brand {
+        flex: 0 0 142px;
     }
 }
