@@ -139,6 +139,10 @@ function dsq_load_scripts()
 {
     wp_enqueue_style('dsq-style', get_stylesheet_directory_uri() .
         '/assets/css/style.css', false, null);
+    wp_enqueue_style('css-fancy', get_stylesheet_directory_uri() .
+        '/assets/css/fancybox.min.css', false, null);
+    wp_enqueue_style('css-tailwinds', get_stylesheet_directory_uri() .
+        '/assets/css/tailwind.min.css', false, null);
     wp_enqueue_script('jquery');
 }
 add_action('wp_footer', 'dsq_footer_scripts');
@@ -146,6 +150,7 @@ function dsq_footer_scripts()
 {
     /* Plugins Js */
     wp_enqueue_script('js-swup', get_template_directory_uri() . '/assets/js/swup.min.js', array('jquery'));
+    wp_enqueue_script('js-fancy', get_template_directory_uri() . '/assets/js/fancybox.min.js', array('jquery'));
     /* Init Js */
     wp_enqueue_script('js-initial', get_template_directory_uri() . '/assets/js/init.js', array('jquery'));
 ?>

@@ -32,3 +32,22 @@
   color: white;
   transition: all 300ms;
 }
+
+.btn-zoom {
+  width: 35px;
+  height: 35px;
+  transition: all 300ms;
+  display: inline-block;
+}
+
+.btn-zoom:hover img {
+  filter: invert(0);
+  transition: all 300ms;
+}
+
+.btn-zoom img {
+  transition: all 300ms;
+  width: 35px;
+  height: 35px;
+  filter: invert(0.3);
+}

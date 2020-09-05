@@ -5,8 +5,6 @@
     <meta charset="<?php bloginfo('charset'); ?>" />
     <meta name="viewport" content="width=device-width" />
     <?php wp_head(); ?>
-    <!--Styles-->
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 
 </head>
 

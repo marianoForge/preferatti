@@ -19,13 +19,19 @@
 					<div class="w-full md:w-8/12 mx-auto px-2">
 
 						<div class="piece--image-wrapper relative mb-4">
-							<?php the_post_thumbnail('full', array('class' => 'w-full artist-piece')); ?>
-
+							<a data-fancybox data-no-swup href="<?php echo the_post_thumbnail_url() ?>" data-caption="<?php the_title(); ?>">
+								<?php the_post_thumbnail('full', array('class' => 'w-full artist-piece')); ?>
+							</a>
 							<a href="<?php echo get_permalink(dsq_previous_page_ID(get_the_ID())); ?>" class="btn-prev"></a>
 							<a href="<?php echo get_permalink(dsq_next_page_ID(get_the_ID())); ?>" class="btn-next"></a>
 
 						</div>
 						<div class="flex flex-wrap">
+							<div class="w-full mb-3 text-center md:text-right">
+								<a data-fancybox data-no-swup href="<?php echo the_post_thumbnail_url('full') ?>" class="btn-zoom ml-auto" data-caption="<?php the_title(); ?>">
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/icn-zoom.svg">
+								</a>
+							</div>
 							<div class="w-full md:w-6/12">
 								<h2 class="piece--title uppercase mb-2"><?php the_title(); ?></h2>
 								<h3 class="mb-3 piece--description uppercase">
