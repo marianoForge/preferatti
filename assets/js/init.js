@@ -19,3 +19,26 @@ const options = {
   cache: false,
 };
 const swup = new Swup(options);
+
+// this event runs for every page view after initial load
+swup.on("contentReplaced", swipeMobile);
+
+function swipeMobile() {
+  if (document.querySelector("#hammerWrapper")) {
+    var prevLink = document.getElementById("prevPiece");
+    var nextLink = document.getElementById("nextPiece");
+    var hammerWrapper = document.getElementById("hammerWrapper");
+
+    var mc = new Hammer(hammerWrapper);
+
+    mc.on("swipeleft swiperight", function (ev) {
+      if (ev.type === "swipeleft") {
+        prevLink.click();
+      } else {
+        nextLink.click();
+      }
+    });
+  }
+}
+
+swipeMobile();

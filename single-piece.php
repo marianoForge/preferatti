@@ -18,12 +18,15 @@
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					<div class="w-full md:w-8/12 mx-auto px-2">
 
-						<div class="piece--image-wrapper relative mb-4">
+						<div class="piece--image-wrapper relative mb-4" id="hammerWrapper">
 							<a data-fancybox data-no-swup href="<?php echo the_post_thumbnail_url() ?>" data-caption="<?php the_title(); ?>">
 								<?php the_post_thumbnail('full', array('class' => 'w-full artist-piece')); ?>
 							</a>
-							<a href="<?php echo get_permalink(dsq_previous_page_ID(get_the_ID())); ?>" class="btn-prev"></a>
-							<a href="<?php echo get_permalink(dsq_next_page_ID(get_the_ID())); ?>" class="btn-next"></a>
+							<a href="<?php echo get_permalink(dsq_previous_page_ID(get_the_ID())); ?>" class="btn-prev" id="prevPiece"></a>
+							<a href="<?php echo get_permalink(dsq_next_page_ID(get_the_ID())); ?>" class="btn-next" id="nextPiece"></a>
+
+							<span class="icn-swipe flex md:hidden"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icn-swipe.svg"></span>
+
 
 						</div>
 						<div class="flex flex-wrap">
@@ -43,7 +46,7 @@
 							</div>
 							<div class="w-full md:w-6/12">
 								<span class="block price mb-4 text-left md:text-right">
-									$<?php echo get_field('price'); ?>
+									<?php echo get_field('price'); ?>
 								</span>
 								<div class="text-left md:text-right mb-3">
 									<a href="#" class="btn-piece inline-block text-center uppercase px-4 py-2 inquire-pop-up">

@@ -151,6 +151,8 @@ function dsq_footer_scripts()
     /* Plugins Js */
     wp_enqueue_script('js-swup', get_template_directory_uri() . '/assets/js/swup.min.js', array('jquery'));
     wp_enqueue_script('js-fancy', get_template_directory_uri() . '/assets/js/fancybox.min.js', array('jquery'));
+    wp_enqueue_script('js-hammer', get_template_directory_uri() . '/assets/js/hammer.min.js', array('jquery'));
+
     /* Init Js */
     wp_enqueue_script('js-initial', get_template_directory_uri() . '/assets/js/init.js', array('jquery'));
 ?>
@@ -274,10 +276,10 @@ function dsq_comment_count($count)
         return $count;
     }
 }
-
+/*
 add_filter('acf/format_value/name=price', 'fix_number', 20, 3);
 function fix_number($value, $post_id, $field)
 {
     $value = number_format($value);
     return $value;
-}
+}*/
