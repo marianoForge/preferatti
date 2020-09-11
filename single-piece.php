@@ -7,7 +7,7 @@
 <?php get_header(); ?>
 <!-- Swup Transition -->
 
-<main id="content" class="mt-8 md:mt-16">
+<main id="content" class="mt-8 md:mt-16 mx-3">
 	<div class="flex flex-wrap  md:flex-no-wrap">
 		<div class="menu-wrapper">
 			<!-- Header -->

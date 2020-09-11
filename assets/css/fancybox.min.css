@@ -454,6 +454,8 @@ body.compensate-for-scrollbar {
   right: 0;
   text-align: center;
   z-index: 99996;
+  padding: 5px 20px;
+  background-color: white;
 }
 
 @supports (padding: max(0px)) {
@@ -835,7 +837,7 @@ body.compensate-for-scrollbar {
   opacity: 1;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .fancybox-thumbs {
     width: 110px;
   }

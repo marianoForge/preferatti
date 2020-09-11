@@ -1,53 +1,67 @@
 .btn {
-  background: #efefef;
-  border-radius: 3px;
-  font-size: 10px;
-  color: #3f3f3f;
-  letter-spacing: 1px;
-  text-align: center;
-  line-height: 15px;
-  font-weight: normal;
-  transition: all 300ms;
+    background: #efefef;
+    border-radius: 3px;
+    font-size: 10px;
+    color: #3f3f3f;
+    letter-spacing: 1px;
+    text-align: center;
+    line-height: 15px;
+    font-weight: normal;
+    transition: all 300ms;
 }
 
 .btn:hover {
-  background: #949494;
-  color: white;
+    background: #949494;
+    color: white;
 }
 
 .btn-piece {
-  background: #efefef;
-  border-radius: 3px;
-  font-size: 10px;
-  color: #3f3f3f;
-  font-weight: normal;
-  letter-spacing: 1px;
-  text-align: center;
-  line-height: 15px;
-  width: 102px;
+    background: #efefef;
+    border-radius: 3px;
+    font-size: 10px;
+    color: #3f3f3f;
+    font-weight: normal;
+    letter-spacing: 1px;
+    text-align: center;
+    line-height: 15px;
+    width: 102px;
 }
 
 .btn-piece:hover {
-  background: #949494;
-  color: white;
-  transition: all 300ms;
+    background: #949494;
+    color: white;
+    transition: all 300ms;
 }
 
 .btn-zoom {
-  width: 30px;
-  height: 30px;
-  transition: all 300ms;
-  display: inline-block;
+    width: 30px;
+    height: 30px;
+    transition: all 300ms;
+    display: inline-block;
 }
 
 .btn-zoom:hover img {
-  filter: invert(0);
-  transition: all 300ms;
+    filter: invert(0);
+    transition: all 300ms;
 }
 
 .btn-zoom img {
-  transition: all 300ms;
-  width: 30px;
-  height: 30px;
-  filter: invert(0.3);
+    transition: all 300ms;
+    width: 30px;
+    height: 30px;
+    filter: invert(0.3);
+}
+
+@media (max-width: 768px) {
+    .btn-zoom {
+        width: 25px;
+        height: 25px;
+    }
+
+    .btn-zoom img {
+        transition: all 300ms;
+        width: 25px;
+        height: 25px;
+        filter: invert(0.3);
+    }
 }

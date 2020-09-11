@@ -6,7 +6,7 @@
 ?>
 <?php get_header(); ?>
 <div id="swup" class="transition-fade w-auto">
-	<main id="content" class="mt-8 md:mt-16 pr-4 md:pr-0 md:pl-0 pl-4">
+	<main id="content" class="mt-8 md:mt-16 pr-4 md:pr-0 md:pl-0 pl-4 mx-3">
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 				<h1 class="uppercase mb-12">
 					<a href="<?php echo get_home_url(); ?>" title="Back to Homepage" class="mr-2">

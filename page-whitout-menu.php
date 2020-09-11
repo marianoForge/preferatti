@@ -2,7 +2,7 @@
 /* Template Name: Single Page Whitout Menu */
 ?>
 <?php get_header(); ?>
-<main id="content" class="mt-8 md:mt-16 pr-4 md:pr-0 md:pl-0 pl-4">
+<main id="content" class="mt-8 md:mt-16 pr-4 md:pr-0 md:pl-0 pl-4 mx-3">
     <div class="flex flex-wrap md:flex-no-wrap">
         <div class="menu-wrapper">
             <!-- Header -->
