@@ -124,8 +124,23 @@ body {
 .transition-fade {
     transition: 0.4s;
     opacity: 1;
+    transform: translate3d(0, 0, 0);
 }
 
 html.is-animating .transition-fade {
     opacity: 0;
+    transform: translate3d(-60px, 0, 0);
+}
+
+/* Image Aligned */
+.alignleft {
+    float: left;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.alignright {
+    float: right;
+    margin-left: 30px;
+    margin-bottom: 30px;
 }

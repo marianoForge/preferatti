@@ -17,11 +17,12 @@ dsq is distributed under the terms of private license.
 const options = {
   containers: ["#main--wrapper"],
   cache: false,
+  animateHistoryBrowsing: true,
 };
 const swup = new Swup(options);
 
 // this event runs for every page view after initial load
-swup.on("contentReplaced", swipeMobile);
+swup.on("contentReplaced", (swipeMobile, scrollSidebar));
 
 function swipeMobile() {
   if (document.querySelector("#hammerWrapper")) {
@@ -42,3 +43,16 @@ function swipeMobile() {
 }
 
 swipeMobile();
+
+function scrollSidebar() { 
+  let sidebar = document.getElementById('#menu-menu-artist');
+  let top = sessionStorage.getItem('sidebar-scroll');
+  if (top != null) { 
+    sidebar.scrollTop = parseInt(top, 10);
+  }
+  window.addEventListener('scroll', () => { 
+    localStorage.setItem('sidebar-scroll', sidebar.scrollTop);
+  });
+}
+
+scrollSidebar();

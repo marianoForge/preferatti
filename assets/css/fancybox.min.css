@@ -456,6 +456,7 @@ body.compensate-for-scrollbar {
   z-index: 99996;
   padding: 5px 20px;
   background-color: white;
+  display: none;
 }
 
 @supports (padding: max(0px)) {
