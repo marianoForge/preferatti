@@ -22,7 +22,10 @@ const options = {
 const swup = new Swup(options);
 
 // this event runs for every page view after initial load
-swup.on("contentReplaced", (swipeMobile, scrollSidebar));
+swup.on("contentReplaced", () => {
+  swipeMobile();
+  scrollSidebar();
+ });
 
 function swipeMobile() {
   if (document.querySelector("#hammerWrapper")) {
@@ -45,14 +48,25 @@ function swipeMobile() {
 swipeMobile();
 
 function scrollSidebar() { 
-  let sidebar = document.getElementById('#menu-menu-artist');
-  let top = sessionStorage.getItem('sidebar-scroll');
-  if (top != null) { 
-    sidebar.scrollTop = parseInt(top, 10);
+  var elemScroll = document.getElementById('menu-menu-artist');
+  var topScroll = localStorage.getItem("scroll-top");
+  var leftScroll = localStorage.getItem("scroll-left");
+  if (elemScroll) {
+    window.addEventListener("beforeunload", () => {
+      localStorage.setItem("scroll-top", elemScroll.scrollTop);
+      localStorage.setItem("scroll-left", elemScroll.scrollLeft);
+    });
+    elemScroll.addEventListener("scroll", () => {      
+      localStorage.setItem("scroll-top", elemScroll.scrollTop);
+      localStorage.setItem("scroll-left", elemScroll.scrollLeft);
+    });
+  if (topScroll !== null) {
+    elemScroll.scrollTop = parseInt(topScroll, 10);    
   }
-  window.addEventListener('scroll', () => { 
-    localStorage.setItem('sidebar-scroll', sidebar.scrollTop);
-  });
+    if (leftScroll !== null) { 
+      elemScroll.scrollLeft = parseInt(leftScroll, 10);
+    }
+  }
 }
 
 scrollSidebar();
